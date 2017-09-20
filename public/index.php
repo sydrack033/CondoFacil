@@ -28,7 +28,11 @@
 
   <body id="page-top">
       
-
+      @if (session('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
+       @endif
 
     <!-- Titulo Página -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -36,7 +40,7 @@
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Condo Fácil </a>
 	    <!--  Portal -->
         <div id="login" class="navbar-nav ml-auto">
-        	<a class="nav-login" href="">Acesse o Portal</a>
+        	<a class="nav-login" href="{{route('login.index')}}">Acesse o Portal</a>
         </div>
        </div>
     </nav>
